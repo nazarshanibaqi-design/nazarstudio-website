@@ -1,0 +1,74 @@
+:root{
+  --vx-bg:#0f172a;
+  --vx-bg2:#111827;
+  --vx-panel:#172033;
+  --vx-text:#f8fafc;
+  --vx-muted:#9aa7bd;
+  --vx-line:rgba(255,255,255,.08);
+  --vx-purple:#8b5cf6;
+  --vx-purple2:#a78bfa;
+  --vx-blue:#3b82f6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--vx-bg);
+  color:var(--vx-text);
+  font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.vx-shell{width:min(760px,calc(100% - 36px));margin:0 auto;padding:42px 0 76px}
+.vx-brand{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  font-size:1.45rem;
+  margin-bottom:46px;
+}
+.vx-brand img{width:34px;height:34px;display:block}
+.vx-title{font-size:clamp(2.15rem,5vw,3.2rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.03em}
+.vx-subtitle{color:var(--vx-muted);margin:0 0 22px}
+.vx-meta{color:var(--vx-muted);margin:0 0 18px}
+.vx-langs{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:0 0 36px}
+.vx-langs span{font-weight:800}
+.vx-langs a{color:var(--vx-purple2);font-weight:700}
+.vx-langs a.active{color:#fff}
+.vx-section{margin-top:46px}
+.vx-section h2{font-size:1.4rem;margin:0 0 14px}
+.vx-section p{color:#d7deea;margin:0}
+.vx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.vx-card{
+  padding:20px;
+  border:1px solid var(--vx-line);
+  background:var(--vx-panel);
+  border-radius:18px;
+}
+.vx-card strong,.vx-card span{display:block}
+.vx-card span{color:var(--vx-muted);margin-top:5px}
+.vx-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.vx-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:14px;
+  font-weight:850;
+  background:linear-gradient(135deg,var(--vx-purple),var(--vx-blue));
+  color:#fff;
+}
+.vx-btn.secondary{background:var(--vx-panel);border:1px solid var(--vx-line)}
+.vx-divider{height:1px;background:var(--vx-line);margin:42px 0}
+.vx-footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--vx-line);color:var(--vx-muted);font-size:.92rem}
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] .vx-brand{direction:rtl}
+html[dir="rtl"] .vx-langs{direction:rtl}
+html[dir="rtl"] .vx-actions{direction:rtl}
+@media(max-width:620px){
+  .vx-shell{padding-top:30px}
+  .vx-brand{margin-bottom:34px}
+  .vx-grid{grid-template-columns:1fr}
+}
