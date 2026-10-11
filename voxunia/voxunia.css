@@ -72,3 +72,14 @@ html[dir="rtl"] .vx-actions{direction:rtl}
   .vx-brand{margin-bottom:34px}
   .vx-grid{grid-template-columns:1fr}
 }
+
+.vx-shell>section>h1,.vx-shell article h1{font-size:clamp(2.15rem,5vw,3.2rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.03em}
+.vx-shell section h2,.vx-shell article h2{font-size:1.4rem;margin:46px 0 14px}
+.vx-shell section p,.vx-shell article p{color:#d7deea}
+.vx-shell .muted,.vx-shell .notice{color:var(--vx-muted)}
+.legal-language-switch{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:18px 0 36px}
+.legal-language-switch>span{font-weight:800}
+.legal-language-switch a{color:var(--vx-purple2);font-weight:700}
+.legal-language-switch a.active{color:#fff}
+.legal-related-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:46px;padding-top:24px;border-top:1px solid var(--vx-line)}
+.legal-related-links a{padding:10px 13px;border-radius:12px;background:var(--vx-panel);border:1px solid var(--vx-line);font-weight:800}
