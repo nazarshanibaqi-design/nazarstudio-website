@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Voxunia icon</title>
+<desc id="desc">Voxunia V mark in purple and blue.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0f172a"/>
+    <stop offset="1" stop-color="#111827"/>
+  </linearGradient>
+  <linearGradient id="v" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7c3aed"/>
+    <stop offset=".52" stop-color="#a78bfa"/>
+    <stop offset="1" stop-color="#3b82f6"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="38" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+<circle cx="512" cy="470" r="320" fill="#7c3aed" opacity=".10"/>
+<path d="M214 294c-36-62 9-140 81-140 34 0 65 18 82 48l135 238 135-238c17-30 48-48 82-48 72 0 117 78 81 140L591 674c-35 60-123 60-158 0L214 294Z" fill="url(#v)" filter="url(#glow)"/>
+<path d="M302 240 512 610 722 240" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
