@@ -11,6 +11,11 @@
     node.hidden = node.getAttribute('data-legal-lang') !== lang;
   });
 
+  const activeSection = document.querySelector(`[data-legal-lang="${lang}"]`);
+  const switcher = document.querySelector('.legal-language-switch');
+  const notice = activeSection?.querySelector('.notice');
+  if (activeSection && switcher && notice) notice.insertAdjacentElement('afterend', switcher);
+
   document.querySelectorAll('[data-lang-link]').forEach((link) => {
     const active = link.getAttribute('data-lang-link') === lang;
     link.classList.toggle('active', active);
