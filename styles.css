@@ -126,3 +126,33 @@ footer{border-top:1px solid var(--line);padding:40px 0 50px;color:var(--muted)}.
 .phone-run{position:absolute;left:18px;right:18px;bottom:75px;height:44px;border:0;border-radius:13px;background:linear-gradient(135deg,#4da3ff,#7cc8ff);color:#06111e;font:inherit;font-weight:950;pointer-events:none}.novacode-screen .tabs{padding:14px 10px;background:#202e43}
 @media(max-width:980px){.novacode-phone-visual{min-height:620px}.novacode-phone{width:min(370px,86%)}}
 @media(max-width:760px){.novacode-phone-visual{min-height:590px}.novacode-phone{width:min(350px,92%);transform:none}.novacode-screen{min-height:640px}.phone-line{font-size:.72rem}.phone-console pre{font-size:.68rem}}
+
+
+/* Voxunia legal pages */
+.legal-language-switch{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:22px 0 28px;
+  padding:12px 14px;
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.legal-language-switch>span{font-size:.82rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em;margin-right:2px}
+.legal-language-switch a{padding:7px 11px;border-radius:999px;border:1px solid transparent;font-weight:800;color:#c3d0e1}
+.legal-language-switch a:hover{border-color:rgba(124,200,255,.2);color:#fff}
+.legal-language-switch a.active{background:rgba(77,163,255,.14);border-color:rgba(124,200,255,.24);color:var(--blue2)}
+.legal-related-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.legal-related-links a{padding:11px 14px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid var(--line);font-weight:800;color:#cfe3f7}
+.voxunia-legal-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 34px}
+.voxunia-legal-cards a{padding:20px;border-radius:19px;background:rgba(13,23,40,.82);border:1px solid var(--line);transition:.2s ease}
+.voxunia-legal-cards a:hover{transform:translateY(-2px);border-color:rgba(124,200,255,.22)}
+.voxunia-legal-cards strong,.voxunia-legal-cards span{display:block}
+.voxunia-legal-cards span{color:var(--muted);font-size:.9rem;margin-top:6px}
+html[dir="rtl"] .legal article{text-align:right}
+html[dir="rtl"] .legal-language-switch{direction:rtl}
+html[dir="rtl"] .legal-language-switch>span{margin-right:0;margin-left:2px}
+@media(max-width:760px){.voxunia-legal-cards{grid-template-columns:1fr}}
