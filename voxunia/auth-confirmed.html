@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Voxunia — Email confirmed</title>
+  <link rel="icon" href="../assets/voxunia-icon.png" type="image/png">
+  <link rel="stylesheet" href="voxunia.css?v=1">
+  <style>
+    .vx-confirm{max-width:560px;margin:12vh auto 0;text-align:center}
+    .vx-confirm .vx-brand{margin-bottom:32px}
+    .vx-confirm-icon{width:74px;height:74px;border-radius:22px;margin:0 auto 24px;display:block}
+    .vx-confirm h1{font-size:clamp(2rem,6vw,3rem);line-height:1.08;margin:0 0 14px}
+    .vx-confirm p{color:var(--vx-muted);margin:0 auto;max-width:470px}
+    .vx-confirm .vx-actions{justify-content:center;margin-top:30px}
+  </style>
+</head>
+<body>
+  <main class="vx-shell vx-confirm">
+    <a class="vx-brand" href="support.html" aria-label="Voxunia">
+      <span>Voxunia</span>
+      <img src="../assets/voxunia-icon.png" alt="">
+    </a>
+
+    <img class="vx-confirm-icon" src="../assets/voxunia-icon.png" alt="">
+    <h1 id="title">Email confirmed</h1>
+    <p id="message">Your email address has been confirmed. You can return to Voxunia and sign in.</p>
+
+    <div class="vx-actions">
+      <a class="vx-btn" href="voxunia://login-callback/" id="open-app">Open Voxunia</a>
+      <a class="vx-btn secondary" href="support.html" id="support-link">Support</a>
+    </div>
+
+    <div class="vx-footer">Voxunia · NAZAR Studio · support@nazarstudio.dev</div>
+  </main>
+
+  <script>
+    (() => {
+      const language = (navigator.language || 'en').toLowerCase();
+      const copy = language.startsWith('de')
+        ? {
+            title: 'E-Mail bestätigt',
+            message: 'Deine E-Mail-Adresse wurde bestätigt. Du kannst zu Voxunia zurückkehren und dich anmelden.',
+            open: 'Voxunia öffnen',
+            support: 'Support'
+          }
+        : language.startsWith('ar')
+          ? {
+              title: 'تم تأكيد البريد الإلكتروني',
+              message: 'تم تأكيد عنوان بريدك الإلكتروني. يمكنك العودة إلى Voxunia وتسجيل الدخول.',
+              open: 'فتح Voxunia',
+              support: 'الدعم'
+            }
+          : {
+              title: 'Email confirmed',
+              message: 'Your email address has been confirmed. You can return to Voxunia and sign in.',
+              open: 'Open Voxunia',
+              support: 'Support'
+            };
+
+      if (language.startsWith('ar')) {
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+      } else if (language.startsWith('de')) {
+        document.documentElement.lang = 'de';
+      }
+
+      document.getElementById('title').textContent = copy.title;
+      document.getElementById('message').textContent = copy.message;
+      document.getElementById('open-app').textContent = copy.open;
+      document.getElementById('support-link').textContent = copy.support;
+    })();
+  </script>
+</body>
+</html>
